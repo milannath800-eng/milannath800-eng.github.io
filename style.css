@@ -1,136 +1,48 @@
 /* =========================================
-   GLOBAL RESET
+   HOMEPAGE HERO FIX
 ========================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial Black', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #101010;
-    color: white;
-}
-
-
-/* =========================================
-   NAVIGATION
-========================================= */
-
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-
-    background: linear-gradient(
-        rgba(0,0,0,0.9),
-        transparent
-    );
-}
-
-
-.logo {
-    font-size: 28px;
-    letter-spacing: 3px;
-    color: white;
-    font-weight: 900;
-}
-
-
-.contact-details {
-    font-size: 11px;
-    color: #ccc;
-    font-family: Arial, sans-serif;
-    margin-top: 5px;
-}
-
-
-.nav-links {
-    display: flex;
-    gap: 35px;
-    list-style: none;
-}
-
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    text-transform: uppercase;
-    transition: 0.3s;
-}
-
-
-.nav-links a:hover {
-    color: #D4AF37;
-}
-
-
-
-/* =========================================
-   HOMEPAGE HERO
-========================================= */
-
 
 .hero {
-
     height: 100vh;
     width: 100%;
 
     background-image:
     linear-gradient(
-        rgba(0,0,0,0.65),
-        rgba(0,0,0,0.65)
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
     ),
     url("bg.png");
-
 
     background-size: cover;
     background-position: center;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    padding:0 10%;
-
+    padding: 0 8%;
 }
 
 
-/* =========================================
-   LEFT CONTENT
-========================================= */
-
+/* LEFT TEXT */
 
 .hero-content {
-
-    max-width:600px;
-
+    width: 55%;
 }
 
 
 .hero-content h1 {
 
-    font-size:75px;
-    line-height:1;
-    text-transform:uppercase;
-    font-style:italic;
+    font-size: 65px;
+    line-height: 1.05;
 
-    margin-bottom:25px;
+    text-transform: uppercase;
+    font-style: italic;
 
+    margin-bottom: 25px;
+
+    color:white;
 }
-
 
 
 .hero-content h1 span {
@@ -145,11 +57,13 @@ nav {
 
     color:#cccccc;
 
+    font-family:sans-serif;
+
     font-size:18px;
 
-    font-family:Arial,sans-serif;
-
     line-height:1.6;
+
+    max-width:550px;
 
     margin-bottom:35px;
 
@@ -157,18 +71,15 @@ nav {
 
 
 
-
 /* BUTTON */
 
 .cta-button {
 
-    display:inline-block;
-
     background:#D4AF37;
 
-    color:black;
+    color:#000;
 
-    padding:15px 45px;
+    padding:15px 40px;
 
     text-decoration:none;
 
@@ -178,15 +89,14 @@ nav {
 
     text-transform:uppercase;
 
+    display:inline-block;
+
     transition:0.3s;
 
 }
 
 
-
 .cta-button:hover {
-
-    background:white;
 
     transform:translateY(-5px);
 
@@ -194,14 +104,12 @@ nav {
 
 
 
-/* =========================================
-   PROFILE IMAGE
-========================================= */
+/* RIGHT IMAGE */
 
 
 .hero-image-container {
 
-    width:380px;
+    width:350px;
 
 }
 
@@ -209,62 +117,26 @@ nav {
 
 .hero-image-container img {
 
-
     width:100%;
 
-    border-radius:20px;
-
+    border-radius:15px;
 
     border:3px solid #D4AF37;
 
 
     box-shadow:
-
-    25px 25px 0px rgba(255,255,255,0.1);
-
-
-    transition:0.3s;
+    20px 20px 0 rgba(255,255,255,0.1);
 
 
 }
 
 
 
-.hero-image-container img:hover {
-
-    transform:scale(1.05);
-
-}
-
-
-
-
-/* =========================================
-   MOBILE RESPONSIVE
-========================================= */
-
+/* MOBILE */
 
 @media(max-width:900px){
 
-
-nav {
-
-    padding:20px;
-
-}
-
-
-
-.nav-links {
-
-    display:none;
-
-}
-
-
-
 .hero {
-
 
     flex-direction:column-reverse;
 
@@ -272,34 +144,21 @@ nav {
 
     text-align:center;
 
-    gap:40px;
-
-
 }
 
 
 .hero-content {
 
-    max-width:100%;
+    width:100%;
 
 }
-
 
 
 .hero-content h1 {
 
-    font-size:42px;
+    font-size:40px;
 
 }
-
-
-
-.hero-content p {
-
-    font-size:15px;
-
-}
-
 
 
 .hero-image-container {
@@ -307,7 +166,5 @@ nav {
     width:250px;
 
 }
-
-
 
 }
