@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions - Milan Yogi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="suggestions-page">
+
+    <div class="bg-overlay"></div>
+
+    <nav>
+        <div class="logo-wrapper">
+            <a href="index.html" style="text-decoration:none;">
+                <div class="logo">MILAN YOGI.</div>
+            </a>
+            <div class="contact-details">milannath800@gmail.com</div>
+            <div class="contact-details">Sydney</div>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT ME</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="skills.html">SKILLS</a></li>
+            <li><a href="certifications.html">CERTIFICATIONS</a></li>
+            <li><a href="suggestions.html" style="color: #D4AF37;">SUGGESTIONS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-content">
+        <div class="container">
+            
+            <h2 class="section-title" style="color: #D4AF37;">BACKEND DEMONSTRATION</h2>
+            <p style="color: #ccc; margin-bottom: 40px; max-width: 700px;">
+                This form connects to a <strong>MySQL Database</strong> using <strong>PHP</strong>. 
+                Any data you enter here is validated, processed, and stored in my database for review.
+            </p>
+
+            <div class="form-container">
+                <form action="submit_suggestion.php" method="POST">
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="visitor_name" required placeholder="Enter your name">
+                        </div>
+
+            
+                        <div class="form-group">
+    <label>Date of Visit</label>
+    <input type="text" id="visit_date" name="visit_date" readonly style="background-color: #080808; color: #888; cursor: not-allowed;">
+</div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="visitor_email" required placeholder="name@example.com">
+                    </div>
+
+                    <!-- Suggestions -->
+                    <div class="form-group">
+                        <label>Suggestions for Me/Website</label>
+                        <textarea name="suggestion_text" rows="4" placeholder="How can I improve my portfolio or skills?"></textarea>
+                    </div>
+
+                    <!-- Job Opportunity -->
+                    <div class="form-group">
+                        <label>Job Opportunity (Optional)</label>
+                        <textarea name="job_opportunity" rows="3" placeholder="If you are hiring, let me know the details here..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">SUBMIT TO DATABASE</button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+<script>
+    const today = new Date();
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    document.getElementById('visit_date').value = today.toLocaleDateString('en-GB', options);
+</script>
+</body>
+</html>
